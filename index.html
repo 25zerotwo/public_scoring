@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Event Recorder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Match Event Recorder</h1>
+
+        <!-- Player Names Input Section -->
+        <div style="text-align: center;">
+            <div id="playerNamesSection">
+            <h2>Enter Player Names</h2>
+            <form id="playerNamesForm">
+                <textarea id="playerNamesInput" placeholder="Enter player names, separated by commas" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Set Player Names</button>
+            </form>
+        </div>
+
+        <!-- App section -->
+        <div id="appSection" style="display:none;">
+           
+		<div class="timer-container">
+			    <span id="timer">00:00</span>
+			    <button id="startButton">Start Timer</button>
+    			<button id="pauseButton" disabled>Pause Timer</button>
+    			<button id="resetButton">Reset Timer</button> <!-- Add Reset Button -->
+			</div>
+
+
+            <h2>Players</h2>
+            <div id="playerButtons" class="button-grid"></div>
+
+            <h2>Conceded Goals & Sin Bin</h2>
+            <div class="event-buttons-wrapper">
+                <button id="goalConcededButton" class="event-button">Goal Conceded</button>
+                <button id="sinBinButton" class="event-button">Sin Bin</button>
+            </div>
+
+            <h2>Events</h2>
+            <textarea id="eventsLog" readonly rows="10"></textarea>
+            <br>
+            <button id="saveEventsButton">Save Events to File</button>
+
+            <button id="removeLastEntryButton">Remove Last Entry</button>     
+
+            <div id="totalsSection">
+                <h3>Totals:</h3>
+                <p>Goals Scored: <span id="totalGoalsScored">0</span></p>
+                <p>Goals Conceded: <span id="totalGoalsConceded">0</span></p>
+            </div>
+        </div>
+    </div>
+
+<div>
+        <!-- Beer link section -->
+<div style="text-align: center;">
+    <p> </p>
+    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+        data-name="bmc-button" data-slug="25zerotwo" data-color="#FFDD00" data-emoji="🍺"
+        data-font="Cookie" data-text="If this helped, buy me a beer" data-outline-color="#000000"
+        data-font-color="#000000" data-coffee-color="#ffffff">
+    </script>
+</div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
